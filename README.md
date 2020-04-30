@@ -1,12 +1,12 @@
 # mossbauer_preprocess
-Convert the wine2k input and output files of mossbauer calculation to a database in ASE format.
+Convert the wien2k input and output files of mossbauer calculation to a database in ASE format.
 Later, others can do the regression on it.
 
 # requirments
 ASE https://wiki.fysik.dtu.dk/ase/ase/db/db.html
 
 # workflow
-An example of the mossbauer wine2k calculation is put into the example folder with its result.
+An example of the mossbauer wien2k calculation is put into the example folder with its result.
 
 Run 'python main.py' will analyze it and generate a ret.db of the example.
 
