@@ -2,7 +2,7 @@
 Convert the wine2k input and output files of mossbauer calculation to a database in ASE format.
 Later, others can do the regression on it.
 
-# Requirments
+# requirments
 ASE
 
 # workflow
