@@ -3,7 +3,7 @@ Convert the wine2k input and output files of mossbauer calculation to a database
 Later, others can do the regression on it.
 
 # requirments
-ASE
+ASE https://wiki.fysik.dtu.dk/ase/ase/db/db.html?highlight=database#add-additional-data
 
 # workflow
 An example of the mossbauer wine2k calculation are put into the example folder with its result.
