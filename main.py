@@ -1,7 +1,7 @@
 import os
 import ase
 from ase.db import connect
-# TODO: using re to replace scf parser
+# TODO: use re to replace scf parser
 import extracted_data as extct_mh
 
 root_folder = './example'
