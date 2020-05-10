@@ -23,7 +23,7 @@ It means the Fe atom at the Au position generate the MM, ETA, RTO, EFG, HFF valu
 
 # read data example:
 
-Following command will show the input and output of the regression which need to do for you.
+Following command will show the input and output of the regression.
 
 
 ```
