@@ -4,8 +4,8 @@ from ase.db import connect
 # TODO: using re to replace scf parser
 import extracted_data as extct_mh
 
-# root_folder = './example'
-root_folder = '../'
+root_folder = './example'
+# root_folder = '../'
 max_iron_cnt = 10000
 
 db_name = 'mossbauer.db'
