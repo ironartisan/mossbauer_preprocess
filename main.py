@@ -1,10 +1,16 @@
 import os
-
+import ase
+from ase.db import connect
 # TODO: using re to replace scf parser
 import extracted_data as extct_mh
 
-root_folder = './example'
+# root_folder = './example'
+root_folder = '../'
 max_iron_cnt = 10000
+
+db_name = 'mossbauer.db'
+os.system('rm -rf ' + db_name)
+db = connect(db_name)
 # parse workflow:
 # 1. traverse every folder under root
 # 2. check 2 files, same name but diff extension (scf and struct)
@@ -18,10 +24,23 @@ def parse_struc_file(file_name):
     print('stuc func:', file_name)
     fe_au_atoms = []
     iron_idx = extct_mh.get_Fe_atoms(file_name)
-    return iron_idx, iron_idx # fe_au_atoms
+    with open(file_name, 'r') as orig_fd:
+        orig_str = orig_fd.readlines() # very small file
+
+    for line_idx in range(len(orig_str)):
+        if 'Fe' in orig_str[line_idx]:
+            orig_str[line_idx] = orig_str[line_idx].replace('Fe', 'Au', 1)
+            tmp_file_name = 'tmp.struct'
+            with open(tmp_file_name, 'w') as tmp_fd:
+                tmp_fd.writelines(orig_str)
+            at = ase.io.read(tmp_file_name)
+            fe_au_atoms.append(at)
+            orig_str[line_idx] = orig_str[line_idx].replace('Au', 'Fe', 1)
+
+    return iron_idx, fe_au_atoms
 
 def parse_scf_file(file_name, iron_idx):
-    print('scf func:', file_name)
+    print('scf func:', file_name, iron_idx)
     mm = extct_mh.get_MM(file_name, iron_idx)
     hff = extct_mh.get_HFF(file_name, iron_idx)
     eta = extct_mh.get_ETA(file_name, iron_idx)
@@ -61,10 +80,14 @@ def main():
                 print('-' * 100)
                 continue
             else:
-                pass
-            print('-' * 100)
-            # for d in dirs:
-            #     print(os.path.join(root, d))
+                for i in range(len(at_lst)):
+                    if '' not in props_lst[i]:
+                        db.write(at_lst[i], data={'mm': float(props_lst[i][0]),
+                            'hff': float(props_lst[i][1]),
+                            'eta': float(props_lst[i][2]),
+                            'efg': float(props_lst[i][3]),
+                            'rto': float(props_lst[i][4])
+                            })
 
 
 if __name__ == '__main__':
