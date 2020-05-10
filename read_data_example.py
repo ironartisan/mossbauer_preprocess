@@ -1,4 +1,5 @@
 from ase.db import connect
+from ase.visualize import view
 
 db_name = 'mossbauer.db'
 
@@ -19,3 +20,6 @@ for row in db.select():
     print('REGRESSION OUTPUT: ')
     print('data need to regress: ', row.data)
     print('-' * 100)
+
+    if row.id == 1:
+        view(row.toatoms())
