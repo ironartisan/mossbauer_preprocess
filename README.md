@@ -74,8 +74,8 @@ rto/10000:
 
 eta: 
 
-efg: ; abs(efg): 
+efg: nan ; abs(efg): 1.6408467
 
 hff/10: ; abs(hff/10): 
 
-mm: ; abs(mm): 
+mm: 0.7670598; abs(mm): 0.43506724
