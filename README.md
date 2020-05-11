@@ -62,8 +62,20 @@ rto/10000: 0.00112983
 
 eta: 0.26078588
 
-efg: ; abs(efg):
+efg: 4.2608137; abs(efg): 1.6182544
 
 hff/10: 6.7925687; abs(hff/10): 4.7022185
 
-mm: 0.8959531; abs(mm):
+mm: 0.8959531; abs(mm): 0.5331938
+
+Following the readme of megnet: 'Note that for realistic models, the nfeat_bond can be set to 100 and epochs can be 1000. ', the results are:
+
+rto/10000: 
+
+eta: 
+
+efg: ; abs(efg): 
+
+hff/10: ; abs(hff/10): 
+
+mm: ; abs(mm): 
