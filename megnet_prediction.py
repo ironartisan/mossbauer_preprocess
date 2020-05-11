@@ -58,10 +58,11 @@ if __name__ == '__main__':
 
     # inference
     graphs_valid, targets_valid = cvt_fmt_graph(rows[int(train_ratio * len(rows)):])
-    pred_target = model.predict_graph(graphs_valid)
 
     err_sum = 0
-    for p, l in zip(pred_target, targets_valid):
-        err_sum += abs(p-l)
+    for i in range(len(graphs_valid)):
+        pred_target = model.predict_graph(graphs_valid[i])
+        print(i, '/', len(graphs_valid), 'predict: ', pred_target, 'actual:', targets_valid[i])
+        err_sum += abs(pred_target-targets_valid[i])
 
-    print(err_sum/len(props))
+    print(err_sum/len(graphs_valid))
