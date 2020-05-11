@@ -51,3 +51,7 @@ REGRESSION OUTPUT:
 data need to regress:  {'rto': 15308.107276, 'eta': 0.33698, 'efg': 4.72011, 'hff': -46.08, 'mm': 0.93264}
 
 ```
+
+# prediction example:
+
+Here we use the state-of-the-art framework megnet to predict the properties as a reference.
