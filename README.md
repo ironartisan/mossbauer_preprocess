@@ -58,24 +58,20 @@ Here we use the state-of-the-art framework megnet to predict the properties as a
 
 The MAE error of prediction are:
 
-rto/10000: 0.00112983
-
-eta: 0.26078588
-
-efg: 4.2608137; abs(efg): 1.6182544
-
-hff/10: 6.7925687; abs(hff/10): 4.7022185
-
-mm: 0.8959531; abs(mm): 0.5331938
+| item      | MAE        | item        | MAE       |
+|-----------|------------|-------------|-----------|
+| rto/10000 | 0.00112983 |             |           |
+| eta       | 0.26078588 |             |           |
+| efg       | 4.2608137  | abs(efg)    | 1.6182544 |
+| hff/10    | 6.7925687  | abs(hff/10) | 4.7022185 |
+| mm        | 0.8959531  | abs(mm)     | 0.5331938 |
 
 Following the readme of megnet: 'Note that for realistic models, the nfeat_bond can be set to 100 and epochs can be 1000. ', the results are:
 
-rto/10000: 
-
-eta: 
-
-efg: nan ; abs(efg): 1.6408467
-
-hff/10: ; abs(hff/10): 
-
-mm: 0.7670598; abs(mm): 0.43506724
+| item      | MAE        | item        | MAE       |
+|-----------|------------|-------------|-----------|
+| rto/10000 |  |             |           |
+| eta       |  |             |           |
+| efg       | nan  | abs(efg)    | 1.6408467 |
+| hff/10    |   | abs(hff/10) |  |
+| mm        | 0.7670598  | abs(mm)     | 0.43506724 |
