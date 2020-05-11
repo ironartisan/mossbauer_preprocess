@@ -66,7 +66,7 @@ The MAE error of prediction are:
 | hff/10    | 6.7925687  | abs(hff/10) | 4.7022185 |
 | mm        | 0.8959531  | abs(mm)     | 0.5331938 |
 
-Following the readme of megnet: 'Note that for realistic models, the nfeat_bond can be set to 100 and epochs can be 1000. ', the results are:
+Following the readme of megnet: **'Note that for realistic models, the nfeat_bond can be set to 100 and epochs can be 1000. '**, the results are:
 
 | item      | MAE        | item        | MAE       |
 |-----------|------------|-------------|-----------|
