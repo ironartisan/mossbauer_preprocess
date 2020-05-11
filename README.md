@@ -57,8 +57,13 @@ data need to regress:  {'rto': 15308.107276, 'eta': 0.33698, 'efg': 4.72011, 'hf
 Here we use the state-of-the-art framework megnet to predict the properties as a reference. We implement a basic version following the example of megnet in megnet_prediction.py.
 
 The error of prediction are:
+
 rto:
+
 eta:
+
 efg:
+
 hff:
+
 mm:
