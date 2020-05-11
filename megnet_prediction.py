@@ -48,7 +48,7 @@ def cvt_fmt_graph(rows):
     return graphs_valid, targets_valid
 
 if __name__ == '__main__':
-    rows = db.select()
+    rows = list(db.select())
     random.shuffle(rows)
     
     # training
@@ -57,16 +57,11 @@ if __name__ == '__main__':
     model.train_from_graphs(graphs_valid, targets_valid, epochs=100)
 
     # inference
-    structures = []
-    props = []
-    for row in rows[int(train_ratio * len(rows)):]:
-        structures.append(pymatgen_io_ase.AseAtomsAdaptor.get_structure(row.toatoms()))
-        props.append(row.data[predict_item])
-
-    pred_target = model.predict_structure(structures)
+    graphs_valid, targets_valid = cvt_fmt_graph(rows[int(train_ratio * len(rows)):])
+    pred_target = model.predict_graph(graphs_valid)
 
     err_sum = 0
-    for p, l in zip(props, pred_target):
+    for p, l in zip(pred_target, targets_valid):
         err_sum += abs(p-l)
 
     print(err_sum/len(props))
