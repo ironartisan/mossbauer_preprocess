@@ -54,7 +54,7 @@ data need to regress:  {'rto': 15308.107276, 'eta': 0.33698, 'efg': 4.72011, 'hf
 
 # prediction example:
 
-Here we use the state-of-the-art framework megnet to predict the properties as a reference. We implement a basic version following the example of megnet in megnet_prediction.py.
+Here we use the state-of-the-art framework megnet to predict the properties as a reference. We implement a basic version following the example of megnet in [megnet_prediction.py](https://github.com/liuxiaotong15/mossbauer_preprocess/blob/master/megnet_prediction.py).
 
 The MAE error of prediction are:
 
@@ -66,7 +66,7 @@ The MAE error of prediction are:
 | hff/10    | 6.7925687  | abs(hff/10) | 4.7022185 |
 | mm        | 0.8959531  | abs(mm)     | 0.5331938 |
 
-Following the readme of megnet: **'Note that for realistic models, the nfeat_bond can be set to 100 and epochs can be 1000. '**, the results are:
+Following the readme of megnet: *'Note that for realistic models, the nfeat_bond can be set to 100 and epochs can be 1000. '*, the results are:
 
 | item      | MAE        | item        | MAE       |
 |-----------|------------|-------------|-----------|
