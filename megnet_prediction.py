@@ -34,7 +34,12 @@ def cvt_fmt_graph(rows):
     props = []
     for row in rows:
         structures.append(pymatgen_io_ase.AseAtomsAdaptor.get_structure(row.toatoms()))
+        
+        ########### this line should be modified for different item
         props.append(row.data[predict_item])
+        # props.append(abs(row.data[predict_item]))
+        # props.append(row.data[predict_item]/10000)
+        # props.append(row.data[predict_item]/10)
     graphs_valid = []
     targets_valid = []
     structures_invalid = []
