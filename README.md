@@ -79,8 +79,8 @@ Following the readme of megnet: *'Note that for realistic models, the nfeat_bond
 
 | item      | MAE        | item        | MAE       |
 |-----------|------------|-------------|-----------|
-| rto/10000 |  |             |           |
-| eta       |  |             |           |
+| rto/10000 | 0.00028676 |             |           |
+| eta       | 0.24075222 |             |           |
 | efg       | nan  | abs(efg)    | 1.6408467 |
 | hff/10    | nan | abs(hff/10) | 3.3993573 |
 | mm        | 0.7670598  | abs(mm)     | 0.43506724 |
