@@ -3,17 +3,15 @@ Convert the wien2k input and output files of mossbauer calculation to a database
 Later, others can do the regression on it.
 
 # requirments
-[main.py](https://github.com/liuxiaotong15/mossbauer_preprocess/blob/master/main.py)
+[main.py](https://github.com/liuxiaotong15/mossbauer_preprocess/blob/master/main.py),
 [read_data_example.py](https://github.com/liuxiaotong15/mossbauer_preprocess/blob/master/read_data_example.py)
-
+require:
 [ASE](https://wiki.fysik.dtu.dk/ase/ase/db/db.html)
 
 [megnet_prediction.py](https://github.com/liuxiaotong15/mossbauer_preprocess/blob/master/megnet_prediction.py)
-
-megnet
-
-pymatgen
-
+require:
+megnet,
+pymatgen,
 tensorflow
 
 # workflow
