@@ -14,6 +14,11 @@ megnet,
 pymatgen,
 tensorflow
 
+[soap_prediction.py](https://github.com/liuxiaotong15/mossbauer_preprocess/blob/master/soap_prediction.py)
+require:
+torch
+dscribe
+
 # workflow
 An example of the mossbauer wien2k calculation is put into the example folder with its result.
 
@@ -91,9 +96,9 @@ The MAE error of prediction are:
 
 | item      | MAE        | item        | MAE       |
 |-----------|------------|-------------|-----------|
-| rto/10000 |  |             |  |
+| rto/10000 | 0.0328 |             |  |
 | eta       | 0.255 |             |  |
 | efg       | 4.239 | abs(efg)    | 1.4517 |
-| hff/10    |  | abs(hff/10) |  |
+| hff/10    | 4.551 | abs(hff/10) | 3.0818 |
 | mm        | 0.7031 | abs(mm)     | 0.345 |
 
