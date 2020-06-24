@@ -16,7 +16,7 @@ tensorflow
 
 [soap_prediction.py](https://github.com/liuxiaotong15/mossbauer_preprocess/blob/master/soap_prediction.py)
 require:
-torch
+torch,
 dscribe
 
 # workflow
@@ -90,7 +90,7 @@ Following the readme of megnet: *'Note that for realistic models, the nfeat_bond
 | hff/10    | nan | abs(hff/10) | 3.3993573 |
 | mm        | 0.7670598  | abs(mm)     | 0.43506724 |
 
-Apparently, MEGnet is a globle descriptor and we use Au to replace the Fe in it. It may cause the bad performance. So we choose a local descriptor called SOAP in soap_prediction.py. Also 1000 epoch but split the dataset in 811.
+Apparently, MEGnet is a globle descriptor and we use Au to replace the Fe in it. It may cause the bad performance. So we choose a local descriptor called SOAP in [soap_prediction.py](https://github.com/liuxiaotong15/mossbauer_preprocess/blob/master/soap_prediction.py). Also 1000 epoch but spliting the dataset in 811.
 
 The MAE error of prediction are:
 
