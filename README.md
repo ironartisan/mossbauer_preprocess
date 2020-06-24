@@ -75,3 +75,16 @@ Following the readme of megnet: 'Note that for realistic models, the nfeat_bond 
 | efg       | nan  | abs(efg)    | 1.6408467 |
 | hff/10    |   | abs(hff/10) |  |
 | mm        | 0.7670598  | abs(mm)     | 0.43506724 |
+
+Apparently, MEGnet is a globle descriptor and we use Au to replace the Fe in it. It may cause the bad performance. So we choose a local descriptor called SOAP in soap_prediction.py. Also 1000 epoch but split the dataset in 811.
+
+The MAE error of prediction are:
+
+| item      | MAE        | item        | MAE       |
+|-----------|------------|-------------|-----------|
+| rto/10000 |  |             |  |
+| eta       | 0.255 |             |  |
+| efg       | 4.239 | abs(efg)    | 1.4517 |
+| hff/10    |  | abs(hff/10) |  |
+| mm        | 0.7031 | abs(mm)     | 0.345 |
+
