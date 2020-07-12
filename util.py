@@ -4,8 +4,6 @@
 # @Time : 2020/7/9 21:36
 import re
 
-dest_file = './example/1-3/1-3.scf'
-
 
 def get_lines(scffile_path):
     with open(scffile_path, 'r') as f:
@@ -82,10 +80,5 @@ def get_RTO(scffile_path, iron_idx):
             RTO.append(match_RTO)
     return RTO[: len(iron_idx)]
 
-
-if __name__ == '__main__':
-    value = get_ETA(dest_file, range(1,11))
-    for i in value:
-        print(i)
 
 
