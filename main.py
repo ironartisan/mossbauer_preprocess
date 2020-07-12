@@ -2,14 +2,16 @@ import os
 import ase
 from ase.db import connect
 # TODO: use re to replace scf parser
-import extracted_data as extct_mh
+import util as extct_mh
 
 root_folder = './example'
 # root_folder = '../'
 max_iron_cnt = 10000
 
 db_name = 'mossbauer.db'
-os.system('rm -rf ' + db_name)
+# os.system('rm -rf ' + db_name)
+if os.path.exists(db_name):
+    os.remove(db_name)
 db = connect(db_name)
 # parse workflow:
 # 1. traverse every folder under root
@@ -23,6 +25,7 @@ db = connect(db_name)
 def parse_struc_file(file_name):
     print('stuc func:', file_name)
     fe_au_atoms = []
+    # iron_idx: Atom Fe[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     iron_idx = extct_mh.get_Fe_atoms(file_name)
     with open(file_name, 'r') as orig_fd:
         orig_str = orig_fd.readlines() # very small file
